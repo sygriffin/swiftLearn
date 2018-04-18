@@ -2,6 +2,10 @@
 
 import Cocoa
 
+Int.max
+
+Int.min
+
 
 
 
