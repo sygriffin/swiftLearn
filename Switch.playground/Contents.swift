@@ -46,7 +46,7 @@ var statusString1 : String = "The request failed with the error:"
 
 ///用default屏蔽所有不可能存在的情况
 
-///用
+///用where去创建筛选条件（只要不使用fallthrough找到匹配分支执行完匹配代码就停止了）
 
 switch statusCode1 {
 case 100,101:
@@ -59,6 +59,29 @@ case let unknowCode where (unknowCode >= 200 && unknowCode < 300):
     statusString1 = "\(unknowCode) is not a known code"
 default :
     statusString1 = "UnExpected ERROR!!!"
+}
+
+///元组和模式匹配 --> 元组是开发者认为具有逻辑关联的两个或者多个值的有限新组合
+
+let error = (code:statusCode1, error:statusString1)
+error.code
+error.error
+
+///模式匹配--> 利用元组去进行模式匹配
+
+let firstErrorCode = 404
+let secondErrorCode = 200
+let errorCodes = (firstErrorCode,secondErrorCode)
+
+switch errorCodes {
+case (404,404) :
+    print("No items found!!!")
+case (404, _) :
+    print("First item not found!!!")
+case (_, 404) :
+    print("Second item not found!!!")
+default:
+    print("All items found!!!")
 }
 
 
