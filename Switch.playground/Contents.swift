@@ -44,6 +44,10 @@ var statusString1 : String = "The request failed with the error:"
 
 //值绑定（类似于OC中的%@，%p...）
 
+///用default屏蔽所有不可能存在的情况
+
+///用
+
 switch statusCode1 {
 case 100,101:
     statusString1 += "1xx,\(statusCode1)"
@@ -51,11 +55,13 @@ case 300...307:
     statusString1 += "redirection , \(statusCode1)"
 case 500...505:
     statusString1 += "server error \(statusCode1)"
-case let unknowCode :
+case let unknowCode where (unknowCode >= 200 && unknowCode < 300):
     statusString1 = "\(unknowCode) is not a known code"
+default :
+    statusString1 = "UnExpected ERROR!!!"
 }
 
-///用default屏蔽所有不可能存在的情况
+
 
 
 
