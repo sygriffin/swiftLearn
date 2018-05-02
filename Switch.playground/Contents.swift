@@ -84,6 +84,20 @@ default:
     print("All items found!!!")
 }
 
+///if-case语句，完美的switch语句替代品之一
+///用逗号分隔给if-case添加更多的条件
+
+if case 18...35 = firstErrorCode,firstErrorCode >= 21 {
+    print("wow")
+}
+
+
+
+
+
+
+
+
 
 
 
