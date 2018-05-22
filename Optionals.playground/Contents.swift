@@ -51,6 +51,29 @@ let yetAnotherErrorCodeStr = errorCodeStr1  //可以工作 --> 尽可能推断�
 
 ///可空链式调用 --> 将多个查询串联为一个可空实例的值，整个过程都不为空查询链会返回期望类型的可空实例，否则任意一个为nil整个链式调用都会返回nil
 
+var errorDescription :String?
+if let theERROR = errorCodeStr, let errorCodeInteger = Int(theERROR), errorCodeInteger == 404 {
+    errorDescription = "\(errorCodeInteger + 200):resource was not found."
+}
+
+var upperCassErrorDescrtiption = errorDescription?.uppercased()///此处进行了可空链式调用，如果是空则没有要被转换成大写的值
+errorDescription
+
+///原地直接修改可空实例
+
+upperCassErrorDescrtiption?.append("Please Try Again!")
+upperCassErrorDescrtiption
+
+///nil合并运算符 -- ??
+
+let description = errorDescription ?? "NO ERROR"
+
+///可空类型非常有用，可以追踪实例是否为nil
+
+
+
+
+
 
 
 
