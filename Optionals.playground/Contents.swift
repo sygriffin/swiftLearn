@@ -40,6 +40,21 @@ if let theError = errorCodeStr,let errorCodeInteger = Int(theError) , errorCodeI
 }
 
 //extension --> 隐式展开可空类型
+var errorCodeStr1 : String! = nil//!-->隐式展开可空类型
+///建议 --> 只要是某个实例有可能是nil，就别用隐式展开可空类型，
+//let anotherErrorCodeStr : String = errorCodeStr1  //崩溃 --> 触发陷阱 --> 显式声明，不可能是可空实例
+let yetAnotherErrorCodeStr = errorCodeStr1  //可以工作 --> 尽可能推断安全类型
+//如果想要yetAnotherErrorCodeStr是隐式展开可空类型，那就要进行显式声明
+//（个人理解：显式声明即是将变量的具体类型指定给出，而隐式声明则是不给出，而让swift类型推断自己去判断什么类型）
+
+//主要应用场景 --> 类初始化
+
+///可空链式调用 --> 将多个查询串联为一个可空实例的值，整个过程都不为空查询链会返回期望类型的可空实例，否则任意一个为nil整个链式调用都会返回nil
+
+
+
+
+
 
 
 
