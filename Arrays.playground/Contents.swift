@@ -27,5 +27,37 @@ bucketList
 bucketList[0] = "Climb Mt.Kilimanjaro"
 bucketList
 
+///用赋值运算符新增
+var newItems = [
+    
+    "Let us go Maiami",
+    "Let us go Alaska"
+]
+bucketList += newItems
+bucketList
+
+///插入
+bucketList .insert("Toboggan across Alaska", at: 2)
+bucketList
+
+///检查两个数组是否相等
+///比较相等时，因为数组是有序的，所以顺序不同，元素一致，也会判定为两个数组不相等
+let equal = (bucketList == newItems)
+
+///不可变数组
+let lunches = ["pizza","burger","hotdog"]
+//--> 不可变，改了就会报错
+//lunches .insert("ice", at: 2)
+
+///好好利用文档
+
+
+
+
+
+
+
+
+
 
 
