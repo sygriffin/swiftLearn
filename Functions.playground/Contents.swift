@@ -27,5 +27,12 @@ divisionFunction(dividend: 9, divisor: 3)
 
 ///变长参数 -- 接受0个或者多个参数
 
+func printPersonalGreeting(to names: String...) {
+    print("Hello \(names), welcome to playgrounds!!")
+}
+
+printPersonalGreeting(to:"aaa","bbb")
+
+
 
 
