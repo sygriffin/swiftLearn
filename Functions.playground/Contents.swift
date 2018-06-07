@@ -128,6 +128,15 @@ greetByMiddleName(formFullName:("Matt","Dan","Huges"))
 
 ///关于void
 
+//当函数没有显式返回值的时候
+
+func printAAAAAA () -> Void {
+    print("AAAAAAA")
+}
+printAAAAAA()
+
+///Void 就是 () 的别名
+///Void -- 所有显式函数没有返回值的隐式返回类型
 
 
 
