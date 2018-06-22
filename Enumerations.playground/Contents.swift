@@ -50,6 +50,63 @@ enum TextAligment2 :String {
 }
 
 ///方法 --> 方法可以和枚举关联
+enum Lightbulb {
+    case on
+    case off
+    
+    func surfaceTemperature(forAmbientTemperature amnient:Double) -> Double {
+        switch self {
+        case .on:
+            return amnient + 150.0
+        case .off:
+            return amnient
+        }
+    }
+    
+    mutating func toggle() {
+        switch self {
+        case .on:
+            self = .off
+        case .off:
+            self = .on
+        }
+    }
+}
+
+var bulb = Lightbulb.on
+let ambientTemperature = 77.0
+var bulbTemperature = bulb.surfaceTemperature(forAmbientTemperature: ambientTemperature)
+
+bulb.toggle()
+bulbTemperature = bulb.surfaceTemperature(forAmbientTemperature: ambientTemperature)
+
+///关联值 --> 带关联值的枚举
+enum ShapeDimensions {
+    case point
+    case square(side : Double)
+    case rectangle(width: Double, height: Double)
+    ///利用关联值计算面积
+    func area() -> Double {
+        switch self {
+        case .point:
+            return 0
+        case let .square(side: side):
+            return side * side
+        case let .rectangle(width:w , height:h):
+            return w*h
+        }
+    }
+}
+
+var squareShape = ShapeDimensions.square(side: 10.0)
+var rectShape = ShapeDimensions.rectangle(width: 5.0, height: 10.0)
+var pointShape = ShapeDimensions.point
+
+squareShape.area()
+rectShape.area()
+pointShape.area()
+
+///递归枚举
 
 
 
