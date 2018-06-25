@@ -108,6 +108,23 @@ pointShape.area()
 
 ///递归枚举
 
+//尝试定义族谱树
+//无限递归问题
+//enum FamilyTree {
+//    case noKnownParents
+//    case oneKnownParent (name:String,ancestors:FamilyTree)
+//    case twoKnownParents (fatherName:String,fatherAncestors:FamilyTree,motherName:String,motherAncestors:FamilyTree)
+//}
+
+/*indirect*/
+enum FamilyTree {
+    case noKnownParents
+    indirect case oneKnownParent (name:String,ancestors:FamilyTree)
+    indirect case twoKnownParents (fatherName:String,fatherAncestors:FamilyTree,motherName:String,motherAncestors:FamilyTree)
+}
+
+///Fred族谱树形结构递归模型
+let fredAncestors = FamilyTree.twoKnownParents(fatherName:"Fred Sr.", fatherAncestors: .oneKnownParent(name: "Beth", ancestors: .noKnownParents), motherName: "Marsha", motherAncestors: .noKnownParents)
 
 
 
