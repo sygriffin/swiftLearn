@@ -15,11 +15,17 @@ print("The population is \(myTown.population)")
 ///直接调用就会报错，在创建类调用也会报错 （值不能摆在那，你必须要用？）
 //修改 -- mutating
 myTown.changePopulation(by: 500)
-myTown.printDescription()
+//myTown.printDescription()
+//
+//let genericMonster = Monster()
+//genericMonster.town = myTown
+//genericMonster.terrorizeTown()
 
-let genericMonster = Monster()
-genericMonster.town = myTown
-genericMonster.terrorizeTown()
+let fredTheZombie = Zombie()
+fredTheZombie.town = myTown
+fredTheZombie.terrorizeTown()
+fredTheZombie.town?.printDescription()
+
 
 
 

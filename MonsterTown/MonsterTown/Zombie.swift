@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//类的主要特性 -- 继承
 class Zombie: Monster {
     var walksWithLimp = true
     //禁止重写 -- final
