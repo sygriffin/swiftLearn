@@ -26,6 +26,9 @@ fredTheZombie.town = myTown
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 
+///深入学习--类型方法-->对定义类型本身调用的方法
+//1.对于值类型，要声明类型方法需要使用static关键字
+
 
 
 
