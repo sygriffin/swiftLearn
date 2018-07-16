@@ -44,4 +44,13 @@ let spookeyNoise = Zombie.makeSpookeyNoise()
 
 ///深入学习 -- mutating方法
 
+///新开始--第16章：属性
+let myTownSize = myTown.townSize
+print(myTownSize)
+myTown.changePopulation(by: 1_000_000)
+let myTownSize1 = myTown.townSize
+//即使改变了population，size也不会改变了
+print(myTownSize1)
+
+
 
