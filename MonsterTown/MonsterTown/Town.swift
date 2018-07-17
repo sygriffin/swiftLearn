@@ -9,7 +9,13 @@
 import Foundation
 
 struct Town {
-    var population = 5_422
+    
+    //属性观察者
+    var population = 5_422 {
+        didSet (oldPopulation) {
+            print("Changed!!! to \(population) from \(oldPopulation)")
+        }
+    }
     var numberOfStopLights = 4
     
     

@@ -52,5 +52,10 @@ let myTownSize1 = myTown.townSize
 //即使改变了population，size也不会改变了
 print(myTownSize1)
 
+//使用victimPool
+print("Victim Pool : \(fredTheZombie.victimPool)")
+fredTheZombie.victimPool = 500
+print("Victim Pool : \(fredTheZombie.victimPool)")
+
 
 
