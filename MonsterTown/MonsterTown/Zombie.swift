@@ -9,10 +9,19 @@
 import Foundation
 //类的主要特性 -- 继承
 class Zombie: Monster {
+    
+    override class var spookyNoise : String {
+        return "Brains..."
+    }
+    
     var walksWithLimp = true
+//    private var isFallingApart = false
+    private(set) var isFallingApart = false
     //禁止重写 -- final
     final override func terrorizeTown() {
-        town?.changePopulation(by: -10)
+        if !isFallingApart {
+            town?.changePopulation(by: -10)
+        }
         super.terrorizeTown()
     }
     //类的类型方法要用class关键字标记

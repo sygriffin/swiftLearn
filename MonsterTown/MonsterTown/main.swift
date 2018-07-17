@@ -37,6 +37,7 @@ struct Square {
 //详见Zombie.swift
 //直接调用类方法
 let spookeyNoise = Zombie.makeSpookeyNoise()
+print("\(Zombie.spookyNoise)")
 //3.不想让子类继承某个类方法
 //详见Zombie.swift
 
@@ -56,6 +57,19 @@ print(myTownSize1)
 print("Victim Pool : \(fredTheZombie.victimPool)")
 fredTheZombie.victimPool = 500
 print("Victim Pool : \(fredTheZombie.victimPool)")
+
+if Zombie.isTerrifing {
+    print("run away!!!")
+}
+
+///访问控制
+//open - public - internal(默认) - fileprivate - private
+
+
+
+
+
+
 
 
 

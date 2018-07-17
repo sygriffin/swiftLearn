@@ -8,6 +8,11 @@
 
 import Foundation
 
+/** 属性类型
+ *  存储类型（不可变类型）static
+ *  计算类型（可变类型）class
+ */
+
 struct Town {
     
     //属性观察者
@@ -29,7 +34,8 @@ struct Town {
     }
     ///新开始--第16章：属性
     ///属性章节新增
-    let region = "South"
+    ///region改为存储类型属性 +static
+    static let region = "South"
     //嵌套类型
     enum Size {
         case small

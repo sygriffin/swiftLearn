@@ -9,6 +9,11 @@
 import Foundation
 
 class Monster {
+    static let isTerrifing = true
+    class var spookyNoise: String {
+        return "Grrr"
+    }
+    
     var town: Town?
     var name = "Monster"
     ///读取方法和写入方法
