@@ -14,9 +14,34 @@ class Zombie: Monster {
         return "Brains..."
     }
     
-    var walksWithLimp = true
+//    var walksWithLimp = true
+    var walksWithLimp: Bool
 //    private var isFallingApart = false
-    private(set) var isFallingApart = false
+//    private(set) var isFallingApart = false
+    private(set) var isFallingApart: Bool
+    init(limp: Bool, fallingApart: Bool, town:Town?, monsterName: String) {
+        walksWithLimp = limp
+        isFallingApart = fallingApart
+        super.init(town: town, monsterName: monsterName)
+    }
+    //便捷初始化
+    convenience init(limp: Bool, fallingApart: Bool) {
+        self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "Fred")
+        if walksWithLimp {
+            print("This zombie has a bad knee")
+        }
+    }
+    
+    required init(town: Town?, monsterName: String) {
+        walksWithLimp = false
+        isFallingApart = false
+        super.init(town: town, monsterName: monsterName)
+    }
+    //反初始化 类的实例没用之后将其清除内存的过程
+    deinit {
+        print("Zombie named\(name) is no longer with us")
+    }
+    
     //禁止重写 -- final
     final override func terrorizeTown() {
         if !isFallingApart {

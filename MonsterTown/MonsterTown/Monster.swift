@@ -15,7 +15,8 @@ class Monster {
     }
     
     var town: Town?
-    var name = "Monster"
+//    var name = "Monster"
+    var name: String
     ///读取方法和写入方法
     var victimPool : Int {
         get {
@@ -24,6 +25,11 @@ class Monster {
         set(newVictimPool) {
             town?.population = newVictimPool
         }
+    }
+    //必须初始化方法 - 要实现父类的初始化方法，需要在子类的初始化方法实现之前加上required关键字
+    required init(town: Town?, monsterName: String) {
+        self.town = town
+        name = monsterName
     }
     func terrorizeTown() {
         if town != nil {

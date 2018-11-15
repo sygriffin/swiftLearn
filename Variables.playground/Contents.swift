@@ -26,4 +26,3 @@ let townDeswcription = "This town has \(numberOfStoplights1) stoplights with \(p
 
 
 
-
