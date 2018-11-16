@@ -40,6 +40,35 @@ zeus.name
 //值类型不可以改，但是引用类型就可以
 
 //小心值类型内使用引用类型
+pantheon.cheifGod.name
+
+let greekPantheon = pantheon
+hecate.name = "Trivia"
+greekPantheon.cheifGod.name
+
+//强烈建议在大部分情况下都不要在值类型内使用引用类型
+
+let athena = GreekGod(name: "Athena");
+let gods = [athena,hecate,zeus]
+let godsCopy = gods
+gods.last?.name = "Jupiter"
+gods
+godsCopy
+//此时状态就是浅复制，浅复制不会创建实例的不同副本，只是复制这个实例的引用
+//swift并没有提供深复制的方法，需要的话必须自己编写
+
+//引用类型需要检查两个常量的同一性 --> 用===判断是否指向同一引用
+athena === hecate
+
+///关于是用结构体还是用类的讨论
+/**
+ *  如果类型需要传值，那就用结构体
+ *  类型不支持子类继承，那就用结构体
+ *  表达行为直观并且包含一些简单值，优先考虑使用结构体
+ *  其余都是类
+ */
+
+//深入研究 -- 写时复制 copy on write -- swift容器已经支持写时复制，不需要自己去实现了
 
 
 
