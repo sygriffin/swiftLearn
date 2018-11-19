@@ -69,6 +69,65 @@ athena === hecate
  */
 
 //深入研究 -- 写时复制 copy on write -- swift容器已经支持写时复制，不需要自己去实现了
+fileprivate class IntArrayBuffer {
+    var sortage: [Int]
+    
+    init() {
+        sortage = []
+    }
+    init(buffer: IntArrayBuffer) {
+        sortage = buffer.sortage
+    }
+}
+
+struct IntArray {
+    private var buffer : IntArrayBuffer
+    
+    init() {
+        buffer = IntArrayBuffer()
+    }
+    
+    func describe() {
+        print(buffer.sortage)
+    }
+    
+    private mutating func copyIfNeeded() {
+        if !isKnownUniquelyReferenced(&buffer) {
+            print("making a copy of \(buffer.sortage)")
+            buffer = IntArrayBuffer(buffer: buffer)
+        }
+    }
+    
+    mutating func insert(_ value: Int, at index: Int) {
+        copyIfNeeded()
+        buffer.sortage.insert(value, at: index)
+    }
+    
+    mutating func append(_ value: Int) {
+        copyIfNeeded()
+        buffer.sortage.append(value)
+    }
+    
+    mutating func remove(at index: Int) {
+        copyIfNeeded()
+        buffer.sortage.remove(at:index)
+    }
+
+    
+}
+
+
+var integers = IntArray()
+integers.append(1)
+integers.append(2)
+integers.append(4)
+integers.describe()
+
+var ints = integers
+ints.insert(3, at: 2)
+integers.describe()
+ints.describe()
+
 
 
 
