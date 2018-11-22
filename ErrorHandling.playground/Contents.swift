@@ -76,6 +76,61 @@ class Lexer {
     
 }
 
+//解析符号数组
+
+class Parser {
+    
+    enum Error: Swift.Error {
+        case unExpectedEndOfInput
+        case invalidToken(Token)
+    }
+    
+    let tokens: [Token]
+    var position = 0
+    
+    init(tokens: [Token]) {
+        self.tokens = tokens
+    }
+    
+    func getNextToken() -> Token? {
+        guard position < tokens.count else {
+            return nil
+        }
+        let token = tokens[position]
+        position += 1
+        return token
+    }
+    
+    func getNumber() throws -> Int {
+        guard let token = getNextToken() else {
+            throw Parser.Error.unExpectedEndOfInput
+        }
+        
+        switch token {
+        case .number(let value):
+            return value
+        case .plus:
+            throw Parser.Error.invalidToken(token)
+        }
+    }
+    
+    func parse() throws -> Int {
+        var value = try getNumber()
+        
+        while let token = getNextToken() {
+            switch token {
+            case .plus:
+                let nextNumber = try getNumber()
+                value += nextNumber
+            case .number:
+                throw Parser.Error.invalidToken(token)
+            }
+        }
+        
+        return value
+    }
+}
+
 func evaluate(_ input: String) {
     print ("Evaluating: \(input)")
     let lexer = Lexer(input: input)
@@ -83,10 +138,22 @@ func evaluate(_ input: String) {
     do {
         let tokens = try lexer.lex()
         print("Lexer output :\(tokens)")
+        
+        let parser = Parser(tokens: tokens)
+        let result = try parser.parse()
+        print("Parser output: \(result)")
+        
     }
     catch Lexer.Error.invalidCharacter(let character){
         print("Input contained an invalid character: \(character)")
     }
+    catch Parser.Error.unExpectedEndOfInput {
+        print("Unexpected end of input during parser ")
+    }
+    catch Parser.Error.invalidToken(let token){
+        print("invalid token during parsing: \(token)")
+    }
+        //swich 会对do/catch句块进行全覆盖检查b，必须处理确保潜在的error
     catch {
         print("An error occured: \(error)")
     }
@@ -96,7 +163,9 @@ func evaluate(_ input: String) {
 evaluate("10 + 3 + 5")
 //evaluate("1 + 2 + ASDSA")
 
-//解析符号数组
+//鸵鸟政策处理错误
+//不建议try! -- 一旦出现错误，就会触发陷阱
+
 
 
 
