@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16A1F85A21AE71CE002FF00B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1F85921AE71CE002FF00B /* AppDelegate.swift */; };
-		16A1F85C21AE71CE002FF00B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1F85B21AE71CE002FF00B /* ViewController.swift */; };
 		16A1F85F21AE71CE002FF00B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F85D21AE71CE002FF00B /* Main.storyboard */; };
 		16A1F86121AE71CF002FF00B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F86021AE71CF002FF00B /* Assets.xcassets */; };
 		16A1F86421AE71CF002FF00B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F86221AE71CF002FF00B /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		16A1F8AE21AE7208002FF00B /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1F8AD21AE7208002FF00B /* TestUITests.swift */; };
 		16A1F8BC21AE8211002FF00B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F8BB21AE8211002FF00B /* Mine.storyboard */; };
 		16A1F8BE21AE8382002FF00B /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F8BD21AE8382002FF00B /* Find.storyboard */; };
+		16A1F90021AF83E4002FF00B /* FindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1F8FF21AF83E4002FF00B /* FindVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 /* Begin PBXFileReference section */
 		16A1F85621AE71CE002FF00B /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A1F85921AE71CE002FF00B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16A1F85B21AE71CE002FF00B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16A1F85E21AE71CE002FF00B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16A1F86021AE71CF002FF00B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16A1F86321AE71CF002FF00B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		16A1F8AF21AE7208002FF00B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16A1F8BB21AE8211002FF00B /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		16A1F8BD21AE8382002FF00B /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		16A1F8FF21AF83E4002FF00B /* FindVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				16A1F85921AE71CE002FF00B /* AppDelegate.swift */,
-				16A1F85B21AE71CE002FF00B /* ViewController.swift */,
+				16A1F8FF21AF83E4002FF00B /* FindVC.swift */,
 				16A1F85D21AE71CE002FF00B /* Main.storyboard */,
 				16A1F8BB21AE8211002FF00B /* Mine.storyboard */,
 				16A1F8BD21AE8382002FF00B /* Find.storyboard */,
@@ -455,8 +455,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A1F85C21AE71CE002FF00B /* ViewController.swift in Sources */,
 				16A1F85A21AE71CE002FF00B /* AppDelegate.swift in Sources */,
+				16A1F90021AF83E4002FF00B /* FindVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

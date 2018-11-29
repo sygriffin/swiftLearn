@@ -28,21 +28,43 @@
             </objects>
             <point key="canvasLocation" x="-481" y="-597"/>
         </scene>
-        <!--View Controller-->
+        <!--发现-->
         <scene sceneID="UJy-LW-FJp">
             <objects>
-                <viewController id="opY-I0-tUe" sceneMemberID="viewController">
+                <viewController id="opY-I0-tUe" customClass="FindVC" customModule="HelloSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iD2-2n-Nr3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZw-88-mBB">
+                                <rect key="frame" x="20" y="84" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="i7V-bP-2n3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="opY-I0-tUe" id="OfH-rK-KWG"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0xi-Rq-wIT" firstAttribute="trailing" secondItem="EZw-88-mBB" secondAttribute="trailing" constant="20" id="ALC-RN-zAc"/>
+                            <constraint firstItem="EZw-88-mBB" firstAttribute="top" secondItem="0xi-Rq-wIT" secondAttribute="top" constant="20" id="dno-ZM-mOf"/>
+                            <constraint firstItem="EZw-88-mBB" firstAttribute="leading" secondItem="0xi-Rq-wIT" secondAttribute="leading" constant="20" id="ffO-fA-nsi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0xi-Rq-wIT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hbG-as-ylL"/>
+                    <navigationItem key="navigationItem" title="发现" id="hbG-as-ylL"/>
+                    <connections>
+                        <outlet property="headerTextField" destination="EZw-88-mBB" id="HPA-F1-lsy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4D2-5n-lKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-598"/>
+            <point key="canvasLocation" x="296.80000000000001" y="-598.65067466266873"/>
         </scene>
     </scenes>
 </document>
