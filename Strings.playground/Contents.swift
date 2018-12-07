@@ -39,10 +39,3 @@ let fifthChar = playground[end]
 let range = start...end
 let firstFifthChar = playground[range]
 
-
-
-
-
-
-
-
