@@ -26,6 +26,9 @@
 		16A1F8BC21AE8211002FF00B /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F8BB21AE8211002FF00B /* Mine.storyboard */; };
 		16A1F8BE21AE8382002FF00B /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A1F8BD21AE8382002FF00B /* Find.storyboard */; };
 		16A1F90021AF83E4002FF00B /* FindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1F8FF21AF83E4002FF00B /* FindVC.swift */; };
+		16AAB1CE21BE496E00EB48CF /* Game1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AAB1CD21BE496E00EB48CF /* Game1.storyboard */; };
+		16AAB1D021BE4B6000EB48CF /* Game1VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAB1CF21BE4B6000EB48CF /* Game1VC1.swift */; };
+		16AAB1D221BE6AA600EB48CF /* Game1_RollingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAB1D121BE6AA600EB48CF /* Game1_RollingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		16A1F8BB21AE8211002FF00B /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		16A1F8BD21AE8382002FF00B /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		16A1F8FF21AF83E4002FF00B /* FindVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVC.swift; sourceTree = "<group>"; };
+		16AAB1CD21BE496E00EB48CF /* Game1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game1.storyboard; sourceTree = "<group>"; };
+		16AAB1CF21BE4B6000EB48CF /* Game1VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1VC1.swift; sourceTree = "<group>"; };
+		16AAB1D121BE6AA600EB48CF /* Game1_RollingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1_RollingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		16A1F85821AE71CE002FF00B /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
+				16AAB1CC21BE47E300EB48CF /* Game1 */,
 				16A1F85921AE71CE002FF00B /* AppDelegate.swift */,
 				16A1F8FF21AF83E4002FF00B /* FindVC.swift */,
 				1634EA5121B1098900C6D950 /* WebVC.swift */,
@@ -183,6 +190,7 @@
 				16A1F85D21AE71CE002FF00B /* Main.storyboard */,
 				16A1F8BB21AE8211002FF00B /* Mine.storyboard */,
 				16A1F8BD21AE8382002FF00B /* Find.storyboard */,
+				16AAB1CD21BE496E00EB48CF /* Game1.storyboard */,
 				16A1F86021AE71CF002FF00B /* Assets.xcassets */,
 				16A1F86221AE71CF002FF00B /* LaunchScreen.storyboard */,
 				16A1F86521AE71CF002FF00B /* Info.plist */,
@@ -237,6 +245,15 @@
 				16A1F8AF21AE7208002FF00B /* Info.plist */,
 			);
 			path = TestUITests;
+			sourceTree = "<group>";
+		};
+		16AAB1CC21BE47E300EB48CF /* Game1 */ = {
+			isa = PBXGroup;
+			children = (
+				16AAB1CF21BE4B6000EB48CF /* Game1VC1.swift */,
+				16AAB1D121BE6AA600EB48CF /* Game1_RollingVC.swift */,
+			);
+			path = Game1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AAB1CE21BE496E00EB48CF /* Game1.storyboard in Resources */,
 				16A1F86421AE71CF002FF00B /* LaunchScreen.storyboard in Resources */,
 				16A1F8BE21AE8382002FF00B /* Find.storyboard in Resources */,
 				16A1F86121AE71CF002FF00B /* Assets.xcassets in Resources */,
@@ -464,6 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AAB1D221BE6AA600EB48CF /* Game1_RollingVC.swift in Sources */,
+				16AAB1D021BE4B6000EB48CF /* Game1VC1.swift in Sources */,
 				1634EA5221B1098900C6D950 /* WebVC.swift in Sources */,
 				167A516121B4CFC4007C1BE4 /* AlertVC.swift in Sources */,
 				16A1F85A21AE71CE002FF00B /* AppDelegate.swift in Sources */,
