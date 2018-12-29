@@ -58,7 +58,7 @@ cafe1.unicodeScalars.forEach{ print($0)}
 cafe1.utf8.forEach{ print($0)}
 cafe1.utf16.forEach{ print($0)}
 
-//问题位置
+//问题位置 -- 用String包起来
 String(cafe1.unicodeScalars.dropLast())
 String(cafe1.utf8.dropLast())
 String(cafe1.utf16.dropLast())
@@ -116,6 +116,9 @@ mixStr.split{ _ in
         return false
     }
 }.map(String.init)
+
+
+
 
 
 
