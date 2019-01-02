@@ -104,6 +104,7 @@
 		16A1F8BB21AE8211002FF00B /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		16A1F8BD21AE8382002FF00B /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		16A1F8FF21AF83E4002FF00B /* FindVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVC.swift; sourceTree = "<group>"; };
+		16A33EA221DCBB8300BD31E2 /* Collection.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Collection.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		16AAB1CD21BE496E00EB48CF /* Game1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game1.storyboard; sourceTree = "<group>"; };
 		16AAB1CF21BE4B6000EB48CF /* Game1VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1VC1.swift; sourceTree = "<group>"; };
 		16AAB1D121BE6AA600EB48CF /* Game1_RollingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1_RollingVC.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 			children = (
 				1667B15421D5C04F00BBCA7A /* IntArray.swift */,
 				1667B15621D5C10100BBCA7A /* MyPlayground.playground */,
+				16A33EA221DCBB8300BD31E2 /* Collection.playground */,
 			);
 			path = Marketdown;
 			sourceTree = "<group>";
