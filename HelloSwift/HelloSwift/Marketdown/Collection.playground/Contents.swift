@@ -194,6 +194,27 @@ extension Array {
         
         return tmp
     }
+    
+    //不符合条件的
+    func reject(_ predicate: (Element) -> Bool) -> [Element] {
+        return filter {!predicate($0)}
+    }
+    
+    //可以在这个基础上去定义自己想要的任何特定方法
+    
+    
 }
 
 print(fibonacci.myMap{$0 % 2 == 0})
+
+fibonacci = [0,1,1,2,3,5]
+print(fibonacci.myFilter{$0 % 2 == 0})
+
+
+
+
+//reduce
+
+
+//flatMap
+
