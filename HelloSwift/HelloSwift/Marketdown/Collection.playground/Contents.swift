@@ -202,6 +202,41 @@ extension Array {
     
     //可以在这个基础上去定义自己想要的任何特定方法
     
+    func allMatch(_ predicate: (Element) -> Bool) -> Bool {
+        return !contains {
+            !predicate($0)
+        }
+    }
+    
+    //reduce实现
+    func myReduce<T>(_ initial: T, _ next: (T, Element) -> T) -> T {
+        var tmp = initial
+        
+        for value in self {
+            tmp = next(tmp,value)
+        }
+        
+        return tmp
+    }
+    
+    func myFilter2(_ predicate: (Element) -> Bool) -> [Element] {
+        return reduce([], { predicate($1) ? $0 + [$1] : $0})
+    }
+    
+    func myMap2<T>(_ transform: (Element) -> T) -> [T] {
+        return reduce([], {$0 + [transform($1)]})
+    }
+    
+    func myFlatMap<T>(_ transform:(Element) -> [T]) -> [T] {
+        var tmp : [T] = []
+        
+        for value in self {
+            tmp.append(contentsOf: transform(value))
+        }
+        
+        return tmp
+    }
+    
     
 }
 
@@ -210,11 +245,38 @@ print(fibonacci.myMap{$0 % 2 == 0})
 fibonacci = [0,1,1,2,3,5]
 print(fibonacci.myFilter{$0 % 2 == 0})
 
+print(fibonacci.reject{$0 % 2 == 0})
 
-
+print(fibonacci.contains{$0 % 2 == 0})
 
 //reduce
+fibonacci.myReduce(0, +)
+fibonacci.myReduce(""){$0 + "\($1)"}
+
+print(fibonacci.myMap2{$0 * $0})
 
 
 //flatMap
+
+//将id给每个动物
+let animals = ["🐱","🐩","🐇","🐼"]
+let ids = [1,2,3,4]
+
+print(animals.map{
+    
+    animal in
+    
+    return ids.map{ id in (animal, id)}
+    
+})
+
+print(animals.myFlatMap{
+    
+    animal in
+    
+    return ids.map{ id in (animal, id)}
+    
+})
+//flatMap -- 生成一维数组
+
 
