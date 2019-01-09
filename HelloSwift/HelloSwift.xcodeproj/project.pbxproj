@@ -73,6 +73,7 @@
 /* Begin PBXFileReference section */
 		1632AB2421B52056001C9D91 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 		1634EA5121B1098900C6D950 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		1655067821E5F04D00741361 /* Dictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Dictionary.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1667B15421D5C04F00BBCA7A /* IntArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntArray.swift; sourceTree = "<group>"; };
 		1667B15621D5C10100BBCA7A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		167A516021B4CFC4007C1BE4 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 				1667B15421D5C04F00BBCA7A /* IntArray.swift */,
 				1667B15621D5C10100BBCA7A /* MyPlayground.playground */,
 				16A33EA221DCBB8300BD31E2 /* Collection.playground */,
+				1655067821E5F04D00741361 /* Dictionary.playground */,
 			);
 			path = Marketdown;
 			sourceTree = "<group>";
