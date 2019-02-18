@@ -108,9 +108,9 @@ template1.merge(record10Patch)
 template1
 
 let record11PatchDict = Dictionary(record11Patch)
-print(record11PatchDict)
+//print(record11PatchDict)
 print("+++++++++++++++++++++++")
-print(record11PatchDict.map{$1})
+//print(record11PatchDict.map{$1})
 
 //全部都转成String
 let record111 = record11PatchDict.mapValue{ record -> String in
@@ -124,7 +124,43 @@ let record111 = record11PatchDict.mapValue{ record -> String in
         return String(favourite)
     }
     
-    
 }
 
 print(record111)
+
+//为自定义类型实现Hashable，Key
+
+struct Account {
+    var type : Int
+    var alias : String
+    var createdAt : Date
+    
+    let INT_BIT = (Int)(CHAR_BIT) * MemoryLayout<Int>.size
+    
+    func bitWiseRotate(value: Int, bits: Int) -> Int {
+        return (value << bits) | (value >> (INT_BIT - bits))
+    }
+    
+}
+
+extension Account: Hashable,Equatable {
+    var hashValue: Int {
+        
+        
+        
+        return bitWiseRotate(value: type.hashValue, bits: 10)  ^ alias.hashValue ^ createdAt.hashValue
+    }
+    
+    static func == (lhs: Account, rhs: Account) -> Bool {
+        return lhs.type == rhs.type &&
+               lhs.alias == rhs.alias &&
+               lhs.createdAt == rhs.createdAt
+    }
+    
+}
+
+var data :[Account : Int]?
+
+///Key不要使用引用类型 -- 不必要的麻烦
+
+
