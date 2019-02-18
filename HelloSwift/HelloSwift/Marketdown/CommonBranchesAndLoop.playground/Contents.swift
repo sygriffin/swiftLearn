@@ -1,0 +1,96 @@
+import UIKit
+
+///各种循环和控制语句
+
+//if ... else if ... else && switch
+
+var light = "red"
+
+var action = ""
+
+//尽量用switch去匹配多种情况，更安全，更好表意
+
+switch light {
+case "red":
+    action = "stop"
+default:
+    action = "invalid"
+}
+
+
+//for ... in
+
+for number  in 1...10 {
+    if (number % 2 != 0) { continue }
+    print(number)
+}
+
+var i = 0
+while i < 10 {
+    i += 1
+}
+
+repeat {
+    
+    print(i)
+    i -= 1
+} while i > 0
+
+//了解swift各种条件匹配方式
+
+let origin = (x:0, y:0)
+let pt1 = (x:0, y:0)
+
+//对比两个tuple
+
+//非常规比较方法
+
+if case(0,0) = pt1 {
+    print("@origin")
+}
+
+switch pt1 {
+case (0,0):
+    print("@origin")
+case (_,0):
+    print("@x")
+default:
+    break
+}
+
+let array1 = [1,1,2,2,2]
+
+for case 2 in array1 {
+    print("2")
+}
+
+enum Direction {
+    case north, south, east, west(abbr:String)
+}
+
+let west = Direction.west(abbr: "W")
+if case .west(let direction) = west {
+    print(direction)
+}
+
+let skills: [String?] = ["Swift", nil, "PHP", "JavaScript", nil]
+
+for case let skill? in skills {
+    print(skill)
+}
+
+let smoeValues: [Any] = [1, 1.0, "One"]
+
+for value in smoeValues {
+    switch value {
+    case let v as Int:
+        print("Integer \(v)")
+    case is String:
+        print("String")
+    
+    default:
+        print("Invalid Value")
+    }
+}
+
+

@@ -62,4 +62,27 @@ let letters = CharacterSet.letters
 hw.rangeOfCharacter(from: letters)
 
 
+//理解range与collection的关系
+1..<5//[1,5)
+5..<5//空区间
+1..<Int.max
+
+1...5//[1,5]
+5...5//包含一个元素5
+1...Int.max
+
+//都遵循Comparable & Strideable
+
+for i in 1...5 {
+    print(i)
+}
+///遍历浮点数区间
+for i in stride(from: 1.0, to: 5.0, by: 1.0) {
+    print(i)
+}
+
+///区间类型在不断地改进和优化
+
+
+
 
