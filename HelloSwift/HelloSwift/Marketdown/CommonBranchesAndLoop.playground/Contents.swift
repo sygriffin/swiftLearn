@@ -93,4 +93,57 @@ for value in smoeValues {
     }
 }
 
+//高级的样式匹配方式
+
+for i in 1...10 where i%2 == 0 {
+    
+    print(i)
+
+}
+
+//switch同样适用 where
+
+enum Power {
+    case fullyCharged
+    case normal(percentage: Double)
+    case outOfPower
+}
+
+let battery = Power.normal(percentage: 0.1)
+
+switch battery {
+case .normal(let percentage) where percentage <= 0.1:
+    print("Almost out of power")
+case .normal(let percentage) where percentage >= 0.8:
+    print("Almost fully charged")
+case .fullyCharged, .outOfPower:
+    print("Fully charged or out of power")
+default:
+    print("Normal battery status")
+}
+
+if case .normal(let percentage) = battery, case 0.1...1 = percentage { //未实现Equaltable 实现了range约等于value 但却没有反过来实现
+    print("Almost out of power")
+}
+
+//简化&&
+let username = "aaaaa"
+let password = "bbbbb"
+
+if case ("aaaaa","bbbbb") = (username, password) {
+    
+    print("Correct")
+    
+}
+
+//为什么比较时放在左边 --- 关于swift样式匹配规则及实现
+
+//
+func ~=<T>(value: T, pattern: ClosedRange<T>) -> Bool {
+    return pattern.contains(value)
+}
+
+if case .normal(let percentage) = battery, case percentage = 0.1...1 { //未实现Equaltable 实现了range约等于value 但却没有反过来实现
+    print("Almost out of power")
+}
 
