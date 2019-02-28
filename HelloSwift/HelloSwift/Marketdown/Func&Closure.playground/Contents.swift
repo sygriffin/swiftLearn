@@ -71,19 +71,66 @@ calc(2, 3, mul)
 
 //重载mul
 
-func mul(_ a: Int) -> (Int) -> Int {
-    func innerMul(_ b: Int) -> Int {
-        return a * b
-    }
-    return innerMul
-}
-
-let mul2By = mul(2)
-mul2By(3)
-
-mul(2)(3) //->直接串联内嵌函数参数
+//func mul(_ a: Int) -> (Int) -> Int {
+//    func innerMul(_ b: Int) -> Int {
+//        return a * b
+//    }
+//    return innerMul
+//}
+//
+//let mul2By = mul(2)
+//mul2By(3)
+//mul(2)(3) //->直接串联内嵌函数参数
 
 ///closure --> 强化
+
+func square(n: Int) ->Int {
+    return n*n
+}
+//what is closure
+let squareExpression = {
+    (n:Int) -> Int in
+    return n*n
+}
+
+let numbers = [1,2,3,4,5]
+numbers.map(squareExpression)
+
+numbers.map{
+    $0 * $0
+}
+
+numbers.sorted(by:>)
+
+(0...9).map {_ in
+    arc4random()
+}
+
+func makeCounter() -> () -> Int {
+    var value = 0
+    
+    return {
+        value += 1
+        
+        return value
+    }
+}
+
+let counter1 = makeCounter()
+let counter2 = makeCounter()
+
+print(counter1())
+print(counter1())
+print(counter1())
+
+print(counter2())
+print(counter2())
+print(counter2())
+print(counter2())
+print(counter2())
+
+//value值各自累加 -- 各自捕value
+
 
 
 
