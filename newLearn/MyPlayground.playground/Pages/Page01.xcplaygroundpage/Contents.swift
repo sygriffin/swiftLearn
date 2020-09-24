@@ -35,3 +35,28 @@ let intMax = Int.max
 
 
 //巧用tuple - 元组
+
+//控制流程语句 - 包含汇编分析
+
+//for循环 - 支持区间运算符
+
+// 区间的范围类型
+// ClosedRange
+// Range
+// PartialRangeThrough
+
+let range : ClosedRange = "cc"..."ff"
+print(range)
+//默认都是字符串
+
+//stride - 带间隔的
+
+for _ in stride(from: 4, to: 10, by: 2) {
+    print(1)
+}
+
+//switch - 默认可以不写break 不会贯穿
+
+//fallthrough - 贯穿
+
+//
