@@ -1,0 +1,17 @@
+platform :ios, '10.0'
+
+target 'swiftLearn' do
+  use_frameworks!
+  pod 'Action', '~> 4.1.0'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'NSObject+Rx', '~> 5.1.0'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'Moya'
+  pod 'Alamofire'
+  pod 'ReactorKit', '~> 2.1.0'
+  pod 'PromiseKit', '~> 6.13.1'
+  pod 'Swift_Log', '~> 0.6.0'
+  pod 'NSLogger', '~> 1.9.7'
+    
+end
+

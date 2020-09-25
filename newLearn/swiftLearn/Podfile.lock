@@ -1,0 +1,82 @@
+PODS:
+  - Action (4.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - Alamofire (5.2.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - NSLogger (1.9.7):
+    - NSLogger/ObjC (= 1.9.7)
+  - NSLogger/ObjC (1.9.7)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - ReactorKit (2.1.0):
+    - RxSwift (~> 5.0)
+    - WeakMapTable (~> 1.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SnapKit (5.0.1)
+  - Swift_Log (0.6.0)
+  - WeakMapTable (1.1.0)
+
+DEPENDENCIES:
+  - Action (~> 4.1.0)
+  - Alamofire
+  - Moya
+  - NSLogger (~> 1.9.7)
+  - "NSObject+Rx (~> 5.1.0)"
+  - PromiseKit (~> 6.13.1)
+  - ReactorKit (~> 2.1.0)
+  - RxSwift (~> 5.1.1)
+  - SnapKit (~> 5.0.1)
+  - Swift_Log (~> 0.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Alamofire
+    - Moya
+    - NSLogger
+    - "NSObject+Rx"
+    - PromiseKit
+    - ReactorKit
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - Swift_Log
+    - WeakMapTable
+
+SPEC CHECKSUMS:
+  Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  NSLogger: cf3013a4fba189f631f07e6c3d5b8ce2b209654b
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  ReactorKit: 12a93358c554bb3f167b16b14c40374fa9cd5acd
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Swift_Log: 10b5180f3803b41ddb9319413ebaaab33664cc42
+  WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
+
+PODFILE CHECKSUM: 53f4b717b41c268a1c4fb976fea4c4f33c1f2d01
+
+COCOAPODS: 1.9.3
