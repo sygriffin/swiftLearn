@@ -17,7 +17,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="你好Rx" id="5VA-SC-zN7"/>
+                    <navigationItem key="navigationItem" title="你好Rx" id="5VA-SC-zN7">
+                        <barButtonItem key="rightBarButtonItem" title="下一节" id="bsX-Ir-YrW"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

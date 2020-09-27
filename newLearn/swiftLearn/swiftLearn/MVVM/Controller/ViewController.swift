@@ -6,6 +6,10 @@
 //  Copyright © 2020 sy. All rights reserved.
 //
 
+/**  rxSwift开始
+ *   暂时全部放在Controller
+ */
+
 import UIKit
 
 class ViewController: UIViewController {
