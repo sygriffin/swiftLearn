@@ -12,6 +12,6 @@ target 'swiftLearn' do
   pod 'PromiseKit', '~> 6.13.1'
   pod 'Swift_Log', '~> 0.6.0'
   pod 'NSLogger', '~> 1.9.7'
-    
+  pod 'lottie-ios'   
 end
 

@@ -3,6 +3,7 @@ PODS:
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
   - Alamofire (5.2.2)
+  - lottie-ios (3.1.8)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -37,6 +38,7 @@ PODS:
 DEPENDENCIES:
   - Action (~> 4.1.0)
   - Alamofire
+  - lottie-ios
   - Moya
   - NSLogger (~> 1.9.7)
   - "NSObject+Rx (~> 5.1.0)"
@@ -50,6 +52,7 @@ SPEC REPOS:
   trunk:
     - Action
     - Alamofire
+    - lottie-ios
     - Moya
     - NSLogger
     - "NSObject+Rx"
@@ -65,6 +68,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NSLogger: cf3013a4fba189f631f07e6c3d5b8ce2b209654b
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
@@ -77,6 +81,6 @@ SPEC CHECKSUMS:
   Swift_Log: 10b5180f3803b41ddb9319413ebaaab33664cc42
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
 
-PODFILE CHECKSUM: 53f4b717b41c268a1c4fb976fea4c4f33c1f2d01
+PODFILE CHECKSUM: 8a4a59f5cdf217cc403938ded59b60025c43ac2a
 
 COCOAPODS: 1.9.3
