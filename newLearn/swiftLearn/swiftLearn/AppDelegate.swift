@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import NSLogger
-
-public typealias log = SLog
+//import NSLogger
+//
+//public typealias log = SLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

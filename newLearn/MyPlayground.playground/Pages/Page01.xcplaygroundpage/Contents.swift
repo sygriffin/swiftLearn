@@ -57,6 +57,6 @@ for _ in stride(from: 4, to: 10, by: 2) {
 
 //switch - 默认可以不写break 不会贯穿
 
-//fallthrough - 贯穿
+//fallthrough - 贯穿 继续下一个case
 
 //
