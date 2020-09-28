@@ -59,4 +59,21 @@ for _ in stride(from: 4, to: 10, by: 2) {
 
 //fallthrough - 贯穿 继续下一个case
 
-//
+//case 复合条件 switch->string、character类型也可以
+
+//区间匹配 元组匹配
+
+//模式匹配范畴
+
+//值绑定 => 尾部加where条件 遍历的过程也可以用类似于continue
+
+//标签语句 -> 跳出外部循环
+
+/// function
+
+// 隐式返回
+
+
+
+
+
